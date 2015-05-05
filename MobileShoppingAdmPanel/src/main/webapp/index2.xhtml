@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+<style>
+body {
+	background-color: #d0e4fe;
+}
+
+h1 {
+	color: orange;
+	text-align: center;
+}
+
+p {
+	font-family: "Times New Roman";
+	font-size: 20px;
+}
+
+#container {
+	width: 100%;
+	height: 200px;
+}
+
+#c1 {
+	width: 33%;
+	background-color: #00FFFF;
+}
+
+#c2 {
+	width: 50%;
+	float: left;
+	background-color: #00CCFF;
+}
+
+<!--
+#c3 {
+	width: 25%;
+	float: left;
+	background-color: #0099FF;
+}
+
+#c4 {
+	width: 25%;
+	float: left;
+	background-color: #0066FF;
+}
+-->
+</style>
+</h:head>
+
+<h:body>
+
+	<div id="container">
+		<p:panel header="Product Admin GUI">
+			<div id="c1">
+				<h:form>
+					<p:growl id="msgs" showDetail="true" />
+					<h:panelGrid id="panel" columns="2" cellpadding="5">
+						<p:outputLabel value="Product Id:" for="idText" />
+						<p:inputText id="idText" value="#{productBean.id}" />
+
+						<p:outputLabel value="Product Code:" for="codeText" />
+						<p:inputText id="codeText" value="#{productBean.productCode}" />
+
+						<p:outputLabel value="Product Name:" for="nameText" />
+						<p:inputText id="nameText" value="#{productBean.productName}" />
+
+						<p:outputLabel value="Manufacturer" for="manufacturerText" />
+						<p:inputText id="manufacturerText"
+							value="#{productBean.productManufacturer}" />
+
+						<p:outputLabel value="Cost:" for="costText" />
+						<p:inputText id="costText" value="#{productBean.cost}" />
+
+						<p:outputLabel value="Production Date:" for="productionDateText" />
+						<p:inputText id="productionDateText"
+							value="#{productBean.productionDate}" />
+
+						<p:outputLabel value="Last Consume Date:"
+							for="lastConsumeDateText" />
+						<p:inputText id="lastConsumeDateText"
+							value="#{productBean.lastConsumeDate}" />
+
+						<p:outputLabel value="Product Detail" for="productDetailText" />
+						<p:inputText id="productDetailText"
+							value="#{productBean.productDetail}" />
+					</h:panelGrid>
+					<p:commandButton value="Add Product" update="addResult"
+						actionListener="#{productBean.addButtonAction}"
+						styleClass="ui-priority-primary" />
+					<h:body bgcolor="white">
+						<br />
+						<h>Result: </h>
+						<h:outputText id="addResult" value="#{productBean.productResult}"></h:outputText>
+					</h:body>
+				</h:form>
+				<br /> <br /> <br />
+			</div>
+
+			<!-- 
+		<div id="c2">
+			<h:form>
+				<p:panel header="The Product"></p:panel>
+				
+			</h:form>
+			<br /> <br /> <br />
+		</div>
+		
+		
+		<div id="c4">
+			<h:form>
+				<p:panel header="Remove the product">
+				</p:panel>
+				<p:commandButton value="Submit" />
+			</h:form>
+			<br /> <br /> <br />
+		</div>
+		 -->
+		</p:panel>
+	</div>
+
+</h:body>
+</html>

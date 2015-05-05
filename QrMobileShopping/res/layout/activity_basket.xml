@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFE2"
+    tools:context="com.mobileshopping.mobile.basket.BasketActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="147dp"
+        android:layout_height="180dp"
+        android1:layout_above="@+id/urunekleButon"
+        android1:layout_alignParentLeft="true"
+        android1:layout_alignParentRight="true"
+        android1:layout_alignParentTop="true" />
+
+    <Button
+        android1:id="@+id/urunekleButon"
+        android1:layout_width="100dp"
+        android1:layout_height="70dp"
+        android1:layout_alignParentBottom="true"
+        android1:layout_alignParentRight="true"
+        android1:layout_marginBottom="25dp"
+        android1:background="@drawable/sepetbuttonshape"
+        android1:onClick="addNewProduct"
+        android1:shadowColor="#585BAD"
+        android1:shadowDx="6"
+        android1:shadowDy="-20"
+        android1:shadowRadius="21"
+        android1:text="ÜRÜN EKLE"
+        android1:textColor="#FFFDED"
+        android1:textSize="30sp" />
+
+    <Button
+        android1:id="@+id/anaekranButon"
+        android1:layout_width="120dp"
+        android1:layout_height="70dp"
+        android1:layout_below="@android:id/list"
+        android1:layout_centerHorizontal="true"
+        android1:background="@drawable/sepetbuttonshape"
+        android1:onClick="completeShoppingOrder"
+        android1:shadowColor="#585BAD"
+        android1:shadowDx="6"
+        android1:shadowDy="-20"
+        android1:shadowRadius="21"
+        android1:text="SİPARİŞ"
+        android1:textColor="#FFFDED"
+        android1:textSize="30sp" />
+
+    <Button
+        android1:id="@+id/siparisButon"
+        android1:layout_width="100dp"
+        android1:layout_height="70dp"
+        android1:layout_alignParentLeft="true"
+        android1:layout_alignTop="@+id/anaekranButon"
+        android1:background="@drawable/sepetbuttonshape"
+        android1:onClick="returnToMain"
+        android1:shadowColor="#585BAD"
+        android1:shadowDx="6"
+        android1:shadowDy="-20"
+        android1:shadowRadius="21"
+        android1:text="ANA MENU"
+        android1:textColor="#FFFDED"
+        android1:textSize="30sp" />
+
+</RelativeLayout>

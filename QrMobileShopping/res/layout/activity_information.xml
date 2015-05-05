@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFE2"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mobileshopping.mobile.information.InformationActivity" >
+
+    <TextView
+        android:id="@+id/sehirTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/sehir_text_view" />
+
+    <TextView
+        android:id="@+id/sehirEditTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sehirTextView"
+        android:layout_alignBottom="@+id/sehirTextView"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="76dp"
+        android:text="@string/sehir_edit_view" />
+
+    <TextView
+        android:id="@+id/semtTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sehirTextView"
+        android:layout_below="@+id/sehirTextView"
+        android:layout_marginTop="54dp"
+        android:text="@string/semt_text_view" />
+
+    <TextView
+        android:id="@+id/semtEditTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/semtTextView"
+        android:layout_alignBottom="@+id/semtTextView"
+        android:layout_alignLeft="@+id/sehirEditTextView"
+        android:text="@string/semt_edit_view" />
+
+    <TextView
+        android:id="@+id/adresTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/semtTextView"
+        android:layout_below="@+id/semtTextView"
+        android:layout_marginTop="62dp"
+        android:text="@string/adres_text_view" />
+
+    <TextView
+        android:id="@+id/adresEditTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/adresTextView"
+        android:layout_alignBottom="@+id/adresTextView"
+        android:layout_alignLeft="@+id/semtEditTextView"
+        android:text="@string/adres_edit_view" />
+
+</RelativeLayout>

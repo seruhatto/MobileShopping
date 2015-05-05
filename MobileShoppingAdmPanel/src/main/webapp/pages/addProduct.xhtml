@@ -1,0 +1,60 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/templates/template.xhtml">
+	<ui:define name="metadata">
+	</ui:define>
+	<ui:define name="content">
+		<h:body>
+			<p:panel header="Add Product">
+				<div id="c2">
+					<h:form>
+						<p:growl id="msgs" showDetail="true" />
+						<h:panelGrid id="panel" columns="2" cellpadding="5">
+
+							<p:outputLabel value="Product Code:" for="codeText" />
+							<p:inputText id="codeText" value="#{productBean.productCode}" />
+
+							<p:outputLabel value="Product Name:" for="nameText" />
+							<p:inputText id="nameText" value="#{productBean.productName}" />
+
+							<p:outputLabel value="Manufacturer" for="manufacturerText" />
+							<p:inputText id="manufacturerText"
+								value="#{productBean.manufacturer}" />
+
+							<p:outputLabel value="Cost:" for="costText" />
+							<p:inputText id="costText" value="#{productBean.cost}" />
+
+							<p:outputLabel value="Production Date:" for="productionDateText" />
+							<p:inputText id="productionDateText"
+								value="#{productBean.productionDate}" />
+
+							<p:outputLabel value="Expire Date:" for="expireDateText" />
+							<p:inputText id="expireDateText"
+								value="#{productBean.expireDate}" />
+
+							<p:outputLabel value="Product Detail" for="productDetailText" />
+							<p:inputText id="productDetailText"
+								value="#{productBean.productDetail}" />
+
+							<p:outputLabel value="Product Stock:" for="stockText" />
+							<p:inputText id="stockText" value="#{productBean.stock}" />
+
+							<h:outputText value="QR" />
+							<p:barcode value="#{productBean.productCode}" type="qr" />
+						</h:panelGrid>
+						<p:commandButton value="Add Product" update="addResult"
+							actionListener="#{productBean.addButtonAction}"
+							styleClass="ui-priority-primary" />
+						<br />
+						<br />
+						<h>Result: </h>
+						<h:outputText id="addResult" value="#{productBean.productResult}"></h:outputText>
+					</h:form>
+				</div>
+			</p:panel>
+		</h:body>
+	</ui:define>
+</ui:composition>

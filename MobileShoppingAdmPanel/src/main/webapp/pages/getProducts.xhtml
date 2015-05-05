@@ -1,0 +1,52 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/templates/template.xhtml">
+	<ui:define name="metadata">
+	</ui:define>
+	<ui:define name="content">
+		<h:body>
+			<p:panel header="Product List">
+				<p:dataTable var="product" value="#{productBean.productList}">
+					<p:column headerText="Product Code">
+						<h:outputText value="#{product.productCode}" />
+					</p:column>
+
+					<p:column headerText="Product Name">
+						<h:outputText value="#{product.productName}" />
+					</p:column>
+
+					<p:column headerText="Manufacturer">
+						<h:outputText value="#{product.manufacturer}" />
+					</p:column>
+
+					<p:column headerText="Cost">
+						<h:outputText value="#{product.cost}" />
+					</p:column>
+
+					<p:column headerText="Production Date">
+						<h:outputText value="#{product.productionDate}" />
+					</p:column>
+
+					<p:column headerText="Last Consume Date">
+						<h:outputText value="#{product.expireDate}" />
+					</p:column>
+
+					<p:column headerText="Product Detail">
+						<h:outputText value="#{product.productDetail}" />
+					</p:column>
+
+					<p:column headerText="Product Stock">
+						<h:outputText value="#{product.stock}" />
+					</p:column>
+
+				</p:dataTable>
+				<p:commandButton value="Get Product"
+					actionListener="#{productBean.getAllProductButtonAction}"
+					styleClass="ui-priority-primary" />
+			</p:panel>
+		</h:body>
+	</ui:define>
+</ui:composition>
